@@ -22,9 +22,10 @@ export default function Header({ theme = "cream" }: { theme?: "cream" | "white" 
   };
 
   return (
-    <header className={`sticky top-0 z-50 w-full px-4 py-4 md:px-8 backdrop-blur-md border-b-[3px] border-black text-black ${bgClasses[theme]}`}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between relative z-[60]">
-        <Link href="/" className="font-display font-black text-2xl tracking-tighter">
+    <>
+      <header className={`fixed top-0 z-50 w-full px-4 py-4 md:px-8 backdrop-blur-md border-b-[3px] border-black text-black ${bgClasses[theme]}`}>
+        <div className="max-w-7xl mx-auto flex items-center justify-between relative z-[60]">
+          <Link href="/" className="font-display font-black text-2xl tracking-tighter">
           ORINDLE<span className="text-hotpink">.</span>
         </Link>
 
@@ -104,5 +105,7 @@ export default function Header({ theme = "cream" }: { theme?: "cream" | "white" 
         </div>
       )}
     </header>
+    <div className="h-[73px] md:h-[81px] w-full shrink-0" />
+    </>
   );
 }

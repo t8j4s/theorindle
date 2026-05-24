@@ -137,16 +137,21 @@ export default function WebsiteDevelopment() {
       </section>
 
       {/* Solution Section */}
-      <section className="bg-lime py-24 md:py-32 px-4 border-y-[4px] border-black shadow-[inset_0_4px_0_0_#000]">
+      <section className="bg-lime py-24 md:py-32 px-4 shadow-[inset_0_4px_0_0_#000] border-y-[4px] border-black">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-display font-black text-5xl md:text-7xl leading-[1] uppercase tracking-tighter mb-16 max-w-5xl mx-auto">
+          <h2 className="font-display font-black text-4xl md:text-7xl leading-[1] uppercase tracking-tighter mb-16 max-w-5xl mx-auto">
             We build websites that make your business look serious.
           </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {solutions.map((item) => (
-              <div key={item} className="bg-black text-white border-[3px] border-black rounded-full px-6 py-3 font-bold uppercase text-sm md:text-base hover:bg-cream hover:text-black transition-colors cursor-default">
-                + {item}
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
+            {solutions.map((item, i) => (
+              <motion.div key={item} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-white border-[3px] border-black p-6 md:p-8 rounded-[24px] shadow-[6px_6px_0_0_#000] hover:-translate-y-2 hover:shadow-[10px_10px_0_0_#000] transition-all group flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-cream border-2 border-black flex items-center justify-center font-black group-hover:bg-hotpink group-hover:text-white transition-colors shrink-0">
+                  ✓
+                </div>
+                <div className="font-display font-bold text-xl md:text-2xl uppercase mt-1">
+                  {item}
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -155,11 +160,24 @@ export default function WebsiteDevelopment() {
       {/* Website Types */}
       <section className="py-24 md:py-32 px-4 bg-cream">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display font-black text-4xl md:text-6xl uppercase tracking-tighter mb-16 text-center">Websites we build.</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6">
+            <h2 className="font-display font-black text-5xl md:text-7xl uppercase tracking-tighter max-w-2xl leading-[1]">
+              Websites<br/>we build.
+            </h2>
+            <p className="text-xl font-medium text-black/60 max-w-sm pb-2">
+              From small service businesses to full-scale e-commerce flows.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {types.map((type, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="bg-electricblue text-white border-[3px] border-black p-6 rounded-2xl shadow-[4px_4px_0_0_#000] font-bold text-center uppercase flex items-center justify-center min-h-[120px] hover:bg-black transition-colors">
-                {type}
+              <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="group relative bg-white border-[3px] border-black p-8 rounded-[30px] shadow-[4px_4px_0_0_#000] hover:shadow-[8px_8px_0_0_#000] hover:-translate-y-1 transition-all overflow-hidden hover:bg-electricblue hover:text-white min-h-[160px] md:min-h-[220px] flex flex-col justify-end">
+                <div className="absolute top-6 right-6 w-12 h-12 rounded-full border-[3px] border-black flex items-center justify-center font-black text-2xl group-hover:bg-lime group-hover:text-black transition-colors bg-cream">
+                  +
+                </div>
+                <div className="absolute top-0 left-0 w-full h-[60%] opacity-[0.03] group-hover:opacity-10 transition-opacity bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMwMDAiLz48L3N2Zz4=')]"></div>
+                <h3 className="font-display font-black text-3xl md:text-4xl uppercase leading-tight relative z-10 w-4/5">
+                  {type}
+                </h3>
               </motion.div>
             ))}
           </div>
