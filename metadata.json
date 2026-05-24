@@ -1,0 +1,6 @@
+{
+  "name": "ORINDLE Agency",
+  "description": "A premium, mobile-first, highly converting agency website for ORINDLE, a digital growth agency.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
