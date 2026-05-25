@@ -40,7 +40,7 @@ export default function ContactForm({ serviceName = "General Inquiry" }: { servi
         </div>
         <h3 className="font-display font-black text-3xl md:text-5xl uppercase mb-4 tracking-tighter">Request Received!</h3>
         <p className="font-medium text-lg text-black/80 mb-8">
-          Thanks! ORINDLE received your request. We'll contact you soon to discuss your growth system.
+          Thanks! ORINDLE received your request. We&apos;ll contact you soon to discuss your growth system.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="https://wa.me/919021923579" target="_blank" className="bg-lime text-black border-[3px] border-black px-6 py-3 rounded-full font-bold uppercase hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#000] transition-all">

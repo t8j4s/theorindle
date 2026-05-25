@@ -80,7 +80,7 @@ export default function ContactPage() {
         </div>
         
         <h1 className="font-display font-black text-5xl md:text-7xl uppercase tracking-tighter mb-6 leading-[0.9]">
-          Let's build<br/>
+          Let&apos;s build<br/>
           <span className="text-white" style={{ WebkitTextStroke: '2px black' }}>Something great.</span>
         </h1>
         <p className="font-medium text-lg md:text-xl text-black/80 max-w-2xl mx-auto leading-relaxed mb-12">

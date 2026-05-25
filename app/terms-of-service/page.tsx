@@ -159,7 +159,7 @@ export default function TermsOfServicePage() {
             <ul className="list-disc pl-6 space-y-2 mt-4">
               <li>Misuse the website or its infrastructure</li>
               <li>Submit false or misleading information through our forms</li>
-              <li>Attempt to damage, hack, or disrupt the website's functionality</li>
+              <li>Attempt to damage, hack, or disrupt the website&apos;s functionality</li>
               <li>Copy, reproduce, or steal website content, layouts, or branding without permission</li>
               <li>Use the website for any illegal or unauthorized purposes</li>
             </ul>
@@ -322,7 +322,7 @@ export default function TermsOfServicePage() {
               Limitation of Liability
             </h2>
             <p>
-              Under no circumstances shall ORINDLE or its contractors be liable for any indirect, incidental, or consequential damages, business losses, missed revenue, external platform restrictions, third-party technical failures, or any systemic results outside ORINDLE's direct control.
+              Under no circumstances shall ORINDLE or its contractors be liable for any indirect, incidental, or consequential damages, business losses, missed revenue, external platform restrictions, third-party technical failures, or any systemic results outside ORINDLE&apos;s direct control.
             </p>
           </section>
 

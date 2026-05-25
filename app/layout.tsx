@@ -37,11 +37,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} w-full`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} w-full max-w-[100vw] overflow-x-clip`}>
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
-      <body suppressHydrationWarning className="font-sans antialiased text-[#111111] bg-[#fcfbf8] w-full overflow-x-hidden">{children}</body>
+      <body suppressHydrationWarning className="font-sans antialiased text-[#111111] bg-[#fcfbf8] w-full max-w-[100vw] overflow-x-clip">{children}</body>
     </html>
   );
 }
