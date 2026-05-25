@@ -191,9 +191,9 @@ export default function WebsiteDevelopment() {
           <p className="text-center font-medium text-xl text-white/70 mb-16">We structure wireframes designed to lead users naturally to the CTA.</p>
           <div className="flex flex-col gap-4">
             {['Hero with strong offer', 'Problem/solution block', 'Services section', 'Proof/trust section', 'Process section', 'Pricing/offer section', 'FAQ section', 'Final CTA'].map((section, idx) => (
-              <div key={idx} className="bg-cream text-black border-[3px] border-black p-6 rounded-xl font-display font-bold text-xl md:text-2xl uppercase flex items-center justify-between">
+              <div key={idx} className="bg-cream text-black border-[3px] border-black p-4 md:p-6 rounded-xl md:rounded-2xl font-display font-black text-lg md:text-2xl uppercase flex items-center justify-between group hover:-translate-y-1 hover:shadow-[6px_6px_0_0_#ccff00] transition-all cursor-default">
                 <span>{section}</span>
-                <span className="text-black/20 text-4xl">↓</span>
+                <span className="text-black/30 group-hover:text-hotpink transition-colors">↓</span>
               </div>
             ))}
           </div>

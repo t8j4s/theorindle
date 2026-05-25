@@ -236,17 +236,19 @@ export default function AIAutomation() {
       <section className="py-24 md:py-32 px-4 bg-cream text-black border-y-[4px] border-black">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display font-black text-5xl md:text-7xl leading-[1] uppercase tracking-tighter mb-16 text-center">How we execute.</h2>
-          <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+          <div className="flex flex-col gap-6 md:gap-8 max-w-4xl mx-auto">
             {[
-              { n: '1', t: 'Map repetitive tasks' },
-              { n: '2', t: 'Design automation flow' },
-              { n: '3', t: 'Build chatbot/workflow' },
-              { n: '4', t: 'Test real scenarios' },
-              { n: '5', t: 'Launch and improve' }
+              { n: '01', t: 'Map repetitive tasks' },
+              { n: '02', t: 'Design automation flow' },
+              { n: '03', t: 'Build chatbot/workflow' },
+              { n: '04', t: 'Test real scenarios' },
+              { n: '05', t: 'Launch and improve' }
             ].map((step, i) => (
-              <div key={step.n} className="bg-white border-[3px] border-black p-6 rounded-2xl flex items-center gap-4 shadow-[4px_4px_0_0_#000] flex-1 min-w-[250px]">
-                <div className="font-display font-black text-3xl text-electricblue shrink-0">{step.n}</div>
-                <h3 className="font-bold text-lg uppercase">{step.t}</h3>
+              <div key={step.n} className="flex flex-col md:flex-row gap-6 items-center bg-white border-[3px] border-black p-6 md:p-8 rounded-[30px] shadow-[6px_6px_0_0_#000] hover:-translate-y-1 hover:shadow-[10px_10px_0_0_#000] transition-all group">
+                <div className="font-display font-black text-4xl md:text-6xl text-electricblue bg-cream border-[3px] border-black w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center shrink-0 group-hover:bg-lime group-hover:text-black transition-colors">
+                  {step.n}
+                </div>
+                <h3 className="font-bold text-xl md:text-3xl uppercase leading-tight text-center md:text-left">{step.t}</h3>
               </div>
             ))}
           </div>
