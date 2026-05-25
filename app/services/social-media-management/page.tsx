@@ -139,15 +139,26 @@ export default function SocialMediaManagement() {
       </section>
 
       {/* Deliverables Section */}
-      <section id="deliverables" className="bg-cream border-t-[4px] border-black py-24 md:py-32 px-4">
+      <section id="deliverables" className="py-24 md:py-32 px-4 bg-cream border-t-[4px] border-black">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-display font-black text-5xl md:text-7xl uppercase tracking-tighter">What we can manage <span className="text-hotpink block mt-2">for you.</span></h2>
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6">
+            <h2 className="font-display font-black text-4xl md:text-7xl uppercase tracking-tighter max-w-2xl leading-[1] text-black">
+              What we can<br/>manage <span className="text-hotpink break-words">for you.</span>
+            </h2>
+            <p className="text-xl font-medium text-black/60 max-w-sm pb-2">
+              Everything you need for a consistent social presence.
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {deliverables.map((item, i) => (
-              <motion.div key={item} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="bg-white border-[3px] border-black p-6 rounded-2xl shadow-[4px_4px_0_0_#000] hover:-translate-y-2 transition-transform flex items-center justify-center text-center outline-none">
-                <span className="font-bold uppercase text-sm">{item}</span>
+              <motion.div key={item} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="group relative bg-white border-[3px] border-black p-6 md:p-8 rounded-[30px] shadow-[4px_4px_0_0_#000] hover:shadow-[8px_8px_0_0_#000] hover:-translate-y-1 transition-all overflow-hidden hover:bg-hotpink hover:text-white min-h-[160px] md:min-h-[220px] flex flex-col justify-end text-black">
+                <div className="absolute top-6 right-6 w-10 h-10 md:w-12 md:h-12 rounded-full border-[3px] border-black flex items-center justify-center font-black text-xl md:text-2xl group-hover:bg-lime group-hover:text-black transition-colors bg-cream">
+                  +
+                </div>
+                <div className="absolute top-0 left-0 w-full h-[60%] opacity-[0.03] group-hover:opacity-10 transition-opacity bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMwMDAiLz48L3N2Zz4=')]"></div>
+                <h3 className="font-display font-black text-2xl md:text-3xl uppercase leading-tight relative z-10 w-full md:w-4/5 group-hover:text-white">
+                  {item}
+                </h3>
               </motion.div>
             ))}
           </div>

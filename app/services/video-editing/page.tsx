@@ -166,27 +166,36 @@ export default function VideoEditing() {
       </section>
 
       {/* Video Types */}
-      <section className="bg-black text-white py-24 md:py-32 px-4 border-y-[4px] border-black">
+      <section className="py-24 md:py-32 px-4 bg-cream border-y-[4px] border-black text-black">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display font-black text-5xl md:text-7xl uppercase tracking-tighter mb-4 text-center text-lime">Content we edit.</h2>
-          <p className="text-xl md:text-3xl text-center text-white/60 font-bold mb-16">Optimized for every platform.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6">
+            <h2 className="font-display font-black text-4xl md:text-7xl uppercase tracking-tighter max-w-2xl leading-[1] text-black">
+              Content<br/>we edit.
+            </h2>
+            <p className="text-xl font-medium text-black/60 max-w-[280px] pb-2">
+              Optimized for every platform.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { label: 'Instagram Reels', bgHover: 'hover:bg-hotpink hover:text-black', borderHover: 'group-hover:border-black', icon: '✦', rotate: 'hover:-rotate-2' },
-              { label: 'YouTube Shorts', bgHover: 'hover:bg-[#ff0000] hover:text-white', borderHover: 'group-hover:border-black', icon: '⚡', rotate: 'hover:rotate-2' },
-              { label: 'YouTube Long-Form', bgHover: 'hover:bg-lime hover:text-black', borderHover: 'group-hover:border-black', icon: '▶', rotate: 'hover:-rotate-1' },
-              { label: 'Podcast Clips', bgHover: 'hover:bg-electricblue hover:text-black', borderHover: 'group-hover:border-black', icon: '🎙️', rotate: 'hover:rotate-1' },
-              { label: 'Talking-Head', bgHover: 'hover:bg-cream hover:text-black', borderHover: 'group-hover:border-black', icon: '🗣️', rotate: 'hover:-rotate-2' },
-              { label: 'Ad Creatives', bgHover: 'hover:bg-hotpink hover:text-black', borderHover: 'group-hover:border-black', icon: '🎯', rotate: 'hover:rotate-2' },
-              { label: 'Product Videos', bgHover: 'hover:bg-lime hover:text-black', borderHover: 'group-hover:border-black', icon: '📦', rotate: 'hover:-rotate-1' },
-              { label: 'Educational', bgHover: 'hover:bg-electricblue hover:text-black', borderHover: 'group-hover:border-black', icon: '📚', rotate: 'hover:rotate-1' },
-              { label: 'Founder Videos', bgHover: 'hover:bg-cream hover:text-black', borderHover: 'group-hover:border-black', icon: '🎬', rotate: 'hover:-rotate-2' }
+              { label: 'Instagram Reels', bgHover: 'hover:bg-hotpink hover:text-black', borderHover: 'group-hover:border-black', icon: '✦', rotate: 'hover:-translate-y-1' },
+              { label: 'YouTube Shorts', bgHover: 'hover:bg-[#ff0000] hover:text-white', borderHover: 'group-hover:border-black', icon: '⚡', rotate: 'hover:-translate-y-1' },
+              { label: 'YouTube Long-Form', bgHover: 'hover:bg-lime hover:text-black', borderHover: 'group-hover:border-black', icon: '▶', rotate: 'hover:-translate-y-1' },
+              { label: 'Podcast Clips', bgHover: 'hover:bg-electricblue hover:text-black', borderHover: 'group-hover:border-black', icon: '🎙️', rotate: 'hover:-translate-y-1' },
+              { label: 'Talking-Head', bgHover: 'hover:bg-cream hover:text-black', borderHover: 'group-hover:border-black', icon: '🗣️', rotate: 'hover:-translate-y-1' },
+              { label: 'Ad Creatives', bgHover: 'hover:bg-hotpink hover:text-black', borderHover: 'group-hover:border-black', icon: '🎯', rotate: 'hover:-translate-y-1' },
+              { label: 'Product Videos', bgHover: 'hover:bg-lime hover:text-black', borderHover: 'group-hover:border-black', icon: '📦', rotate: 'hover:-translate-y-1' },
+              { label: 'Educational', bgHover: 'hover:bg-electricblue hover:text-black', borderHover: 'group-hover:border-black', icon: '📚', rotate: 'hover:-translate-y-1' },
+              { label: 'Founder Videos', bgHover: 'hover:bg-cream hover:text-black', borderHover: 'group-hover:border-black', icon: '🎬', rotate: 'hover:-translate-y-1' }
             ].map((type, i) => (
-              <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="group perspective-1000">
-                <div className={`bg-[#111] border-[3px] border-white/20 p-8 rounded-2xl flex flex-col items-center justify-center text-center font-bold text-xl md:text-2xl uppercase transition-all duration-300 ${type.bgHover} ${type.rotate} shadow-none hover:shadow-[8px_8px_0_0_#fff]`}>
-                  <div className={`text-4xl mb-4 opacity-50 group-hover:opacity-100 transition-opacity drop-shadow-md`}>{type.icon}</div>
-                  <span className="tracking-tighter">{type.label}</span>
+              <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className={`group relative bg-white border-[3px] border-black p-8 rounded-[30px] shadow-[4px_4px_0_0_#000] hover:shadow-[8px_8px_0_0_#000] transition-all overflow-hidden min-h-[160px] md:min-h-[220px] flex flex-col justify-end text-black ${type.bgHover} ${type.rotate}`}>
+                <div className="absolute top-6 right-6 w-12 h-12 rounded-full border-[3px] border-black flex items-center justify-center font-black text-2xl group-hover:bg-white group-hover:text-black transition-colors bg-cream">
+                  {type.icon}
                 </div>
+                <div className="absolute top-0 left-0 w-full h-[60%] opacity-[0.03] group-hover:opacity-10 transition-opacity bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMwMDAiLz48L3N2Zz4=')]"></div>
+                <h3 className="font-display font-black text-3xl md:text-4xl uppercase leading-tight relative z-10 w-4/5">
+                  {type.label}
+                </h3>
               </motion.div>
             ))}
           </div>
@@ -194,16 +203,16 @@ export default function VideoEditing() {
       </section>
 
       {/* Retention Framework Section */}
-      <section className="py-24 md:py-32 px-4 bg-cream">
+      <section className="py-24 md:py-32 px-4 bg-black text-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display font-black text-5xl md:text-7xl leading-[1] uppercase tracking-tighter mb-16 text-center">Every edit follows an <span className="text-electricblue">attention system.</span></h2>
+          <h2 className="font-display font-black text-4xl md:text-6xl leading-[1] uppercase tracking-tighter mb-16 text-center">Every edit follows an <br className="hidden md:block"/><span className="text-lime">attention system.</span></h2>
           <div className="flex flex-col md:flex-row gap-4 justify-between items-stretch max-w-5xl mx-auto w-full">
             {['Hook', 'Context', 'Value', 'Pattern Interrupt', 'Proof', 'CTA'].map((step, i) => (
-              <div key={i} className="flex-1 flex flex-col gap-4">
-                <div className="bg-white border-[3px] border-black p-4 rounded-xl shadow-[4px_4px_0_0_#ff007f] text-center font-display font-black text-sm uppercase h-full flex items-center justify-center">
+              <div key={i} className="flex-1 flex flex-col md:flex-row gap-4 md:items-center">
+                <div className="bg-[#111] border-[3px] border-white/20 p-4 md:p-6 rounded-xl hover:border-lime transition-colors text-center font-display font-black text-sm md:text-lg uppercase h-full flex items-center justify-center w-full">
                   {step}
                 </div>
-                {i < 5 && <div className="text-center text-2xl font-black text-black/20 md:-rotate-90">↓</div>}
+                {i < 5 && <div className="text-center md:text-left text-2xl font-black text-white/20 flex items-center justify-center -rotate-90 md:rotate-0 h-8 md:h-auto md:w-8">→</div>}
               </div>
             ))}
           </div>
